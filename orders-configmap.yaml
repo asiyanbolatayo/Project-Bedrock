@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: orders-configmap
+data:
+  DB_HOST: "innovate-mart-orders.c8hwces2g3fp.us-east-1.rds.amazonaws.com"
+  DB_NAME: "orders"

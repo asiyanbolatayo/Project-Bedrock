@@ -1,0 +1,29 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJTndNcnMzL3h0RUV3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TlRBNU1UTXhOVFF4TkROYUZ3MHpOVEE1TVRFeE5UUTJORE5hTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUUMxVXk0OWRPcjBvTDBQc1BzRUZhNWpQTjNsT3N0VHo4UTQ0SEk3b2NLc2NpUzZMdlRUczVLY0xDSUkKZ055MVF3OGxIWTBoQ1M2SlIwVU14RnV3OFFIdFNpeXJxOU42Y0Nud3F1WnR4bC9MZm9rTG9vQ1hBS3cxSkhNbQpxaEp5NEhtRWV2RG5DcmIwc3AxZENpbWZnbG80RGw4MW83VmJZcGJGS054Q0x0UzZoL3hKamFxZnhDOXFaS1lhCndUTmNUN2pxTWJLQUdRV0hhS3FQU0dMSmt6Y2UreVhLUHBwMU05L1FML1NQc0ZmY3owQkNCcmgxRkhOSE9jMHEKUFlUdEFHak5kNkdvQktPMEh4YlAweDlwd1BUWGNycjBPOEJXQ2RPK1hhcVR1VHZ3Mi9ZTkV6MFdPMFJMRC96dwpKZU5GNDBlWGE0dW1iM1QzUjdEdFZoS2pyN3piQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJUeTlsdHdObnczWm96dGdQeDg3M1JVZGhQT2ZEQVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQUFpMGl0QUdESQo1YXFpdnd6THNNdVRMSWdWc3hUdWRaWXZPQmdwK0pCNVpqT2F1eVJTZ1FUVDVhYzVFdGI2aldVWlBDN0NBOEVWCktyWUZyNU9xbHQ0N2lxbVZrdkRQOXN2ZTBSd2Z3cUN5b2VWWCt6OXB6WXlLYno1TExYQ1lmek9VNWFaZjc2blcKRkpXUS94NVlSWm9DZVRzQlpGTXdablJXZHVMeVBENFdyRHA5N2xoa3YwQ3JMT2JVNVcvU2crdWxTZ1M1SE4vMQowY0lZMWc3RjhybjYraElMUkN1a1EweTFEUXREQ1l5aTBwa29ZR2hMQytLQnF1ZzU3dFZIZENwYVZKWDVVZGZJCjRuY0FEMjc4YTFtRXhpZFo0eVI4RXR6bWVMOUQ4M24yTnFWN25FUUk4dGFiSEpXejN2d0Jsa3JTeUVMMnh3UHEKWHdCc1QxOUsxR05nCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    server: https://FA1B439F77A49EB9F6D42D167F82773B.gr7.us-east-1.eks.amazonaws.com
+  name: arn:aws:eks:us-east-1:710271919629:cluster/innovate-mart-eks-cluster
+contexts:
+- context:
+    cluster: arn:aws:eks:us-east-1:710271919629:cluster/innovate-mart-eks-cluster
+    user: arn:aws:eks:us-east-1:710271919629:cluster/innovate-mart-eks-cluster
+  name: arn:aws:eks:us-east-1:710271919629:cluster/innovate-mart-eks-cluster
+current-context: arn:aws:eks:us-east-1:710271919629:cluster/innovate-mart-eks-cluster
+kind: Config
+preferences: {}
+users:
+- name: arn:aws:eks:us-east-1:710271919629:cluster/innovate-mart-eks-cluster
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - --region
+      - us-east-1
+      - eks
+      - get-token
+      - --cluster-name
+      - innovate-mart-eks-cluster
+      - --output
+      - json
+      command: aws

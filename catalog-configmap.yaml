@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: catalog-configmap
+data:
+  DB_HOST: "innovate-mart-catalog.c8hwces2g3fp.us-east-1.rds.amazonaws.com"
+  DB_NAME: "catalog"

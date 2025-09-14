@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::710271919629:role/innovate-mart-eks-cluster-role
+  labels:
+    app.kubernetes.io/managed-by: Helm
+    helm.sh/chart: aws-load-balancer-controller-1.2.3
+  name: aws-load-balancer-controller
+  namespace: kube-system
