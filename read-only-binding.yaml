@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: innovate-mart-read-only-binding
+subjects:
+- kind: Group
+  name: innovate-mart-developer-group
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: innovate-mart-read-only
+  apiGroup: rbac.authorization.k8s.io
